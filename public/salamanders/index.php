@@ -41,7 +41,7 @@
   	</table>
 
     <?php
-      mysqli_free_result($salmanderSet);
+      mysqli_free_result($salamanderSet);
     ?>
 
   </div>
