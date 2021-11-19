@@ -19,9 +19,9 @@
   	<table class="list">
   	  <tr>
         <th>ID</th>
-        <th>Position</th>
-        <th>Visible</th>
-  	    <th>Name</th>
+        <th>Salamander Name</th>
+        <th>Habitat</th>
+  	    <th>Description</th>
   	    <th>&nbsp;</th>
   	    <th>&nbsp;</th>
         <th>&nbsp;</th>
@@ -30,11 +30,11 @@
       <?php while($salamander = mysqli_fetch_assoc($salamanderSet)) { ?>
         <tr>
           <td><?php echo h($salamander['id']); ?></td>
-          <td><?php echo h($salmander['name']); ?></td>
+          <td><?php echo h($salamander['name']); ?></td>
           <td><?php echo h($salamander['habitat']); ?></td>
     	    <td><?php echo h($salamander['description']); ?></td>
-          <td><a class="action" href="<?php echo url_for('salamanders/show.php?id=' . h(u($page['id']))); ?>">View</a></td>
-          <td><a class="action" href="<?php echo url_for('salamanders/edit.php?id=' . h(u($page['id']))); ?>">Edit</a></td>
+          <td><a class="action" href="<?php echo url_for('salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
+          <td><a class="action" href="<?php echo url_for('salamanders/edit.php?id=' . h(u($salamander['id']))); ?>">Edit</a></td>
           <td><a class="action" href="">Delete</a></td>
     	  </tr>
       <?php } ?>
